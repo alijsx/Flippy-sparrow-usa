@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>osama op</title>
+<title>Flippy sparrow usa 🍌</title>
 <style>
   * { 
     margin:0; 
     padding:0; 
-    box-sizing:border-box;    
+    box-sizing:border-box; 
   }
   
   html, body { 
@@ -166,23 +166,6 @@
     margin-bottom: 30px;
   }
 
-  .game-over-images {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-  }
-
-  .game-over-image {
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
-    animation: pulse 2s infinite;
-  }
-
   .restart-btn {
     padding: 15px 50px;
     font-size: 1.5rem;
@@ -230,8 +213,6 @@
     #introCharacter { width:60%; max-width:250px; }
     .score-display { font-size: 2rem; top: 20px; left: 20px; }
     .controls-info { font-size: 1rem; }
-    .game-over-image { width: 220px; height: 120px; }
-    .game-over-images { gap: 20px; }
   }
 
   @media(max-width:480px){
@@ -241,8 +222,6 @@
     #introCharacter { width:70%; max-width:200px; }
     .score-display { font-size: 1.8rem; top: 15px; left: 15px; padding: 8px 15px; }
     .controls-info { font-size: 0.9rem; bottom: 20px; }
-    .game-over-image { width: 100px; height: 100px; }
-    .game-over-images { gap: 15px; }
   }
 </style>
 </head>
@@ -255,21 +234,14 @@
 
 <div id="startScreen">
   <img id="introCharacter" src="images/character.png" alt="Character">
-  <h1>osama op</h1>
+  <h1>🍌 Flippy Sparrow 🍌</h1>
   <p>Navigate through the banana pipes and avoid obstacles!</p>
   <button id="playBtn">Play Now</button>
 </div>
 
 <div class="game-over">
-  <h2>💀 Game Over adjust krlo💀</h2>
+  <h2>💀 Game Over 💀</h2>
   <p>Your Score: <span id="finalScore">0</span></p>
-  
-  <!-- Game Over Images Container -->
-  <div class="game-over-images">
-    <img class="game-over-image" src="images/gameover1.png" alt="Game Over Image 1">
-    <img class="game-over-image" src="images/gameover2.png" alt="Game Over Image 2">
-  </div>
-  
   <button class="restart-btn">Play Again</button>
 </div>
 
@@ -305,12 +277,6 @@ const birdImg = new Image();
 birdImg.src = "images/character.png"; // Your original path
 const bananaImg = new Image();
 bananaImg.src = "images/banana.png"; // Your original path
-
-// Game Over images
-const gameOverImg1 = new Image();
-gameOverImg1.src = "images/gameover1.png";
-const gameOverImg2 = new Image();
-gameOverImg2.src = "images/gameover2.png";
 
 // Game variables - Made easier and smaller character
 let bird = { x:100, y:height/2, w:60, h:60, velocity:0, gravity:0.3 }; // Smaller character size
